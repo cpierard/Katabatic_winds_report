@@ -89,16 +89,14 @@ Supervisor: Jean-Emmanuel Sicart}
 
 Katabatic winds or gravity currents are downslope winds that are generated when cold dense air is accelerated down a topographic slope due to surface cooling that gives the air a greater density than the free atmosphere~\citep{poulos2008observational}. They can be found in many places over the world, but they are mostly present in mountainous regions.
 
-Katabatic winds play an important role in the local weather and the dispersion of contaminants in the valleys. These winds can flown down the mountains and fill the cool air pools that accumulate in the valleys. This can result in a temperature inversion with negative effects in urban valleys where pollution is present~\citep{largeron2016persistent}. 
-%scientific relevance
+Katabatic winds play an important role in the local weather and the dispersion of contaminants in the valleys. These winds can flow down the mountains and fill the cool air pools that accumulate in the valleys. This can result in temperature inversions, which have negative effects on urban valleys where pollution is present~\citep{largeron2016persistent}. Nowadays, katabatic winds are not well represented or parameterised in the mesoscale models for weather forecast and this can cause errors in the forecasts for mountainous regions. There have been several studies of katabatic winds historically, mostly centred in the alpine regions of Europe, some parts of North America, Greenland and Antarctica. Despite this, there is a lack of suitable data obtained from measurements that can be used to test or adapt the theoretical models of katabatic winds~\citep{manins1979katabatic}. This is why is relevant a field case study of these winds.
 
-Nowadays, the mesoscale models for weather forecast can't predict 
 \section{Theory}
 
 In this section we introduce and define some of the concepts necessary for this project, starting from the boundary layer structure to the specifics of the turbulent quantities necessary for its characterisation.
 
 \subsection{Boundary layer structure}
-The planetary boundary layer or atmospheric boundary layer (ABL) is defined as the part of the troposphere that is in contact with the surface and that is directly influenced by surface forcings, such as friction, evaporation, heat transfer, emission of contaminants and by the soil~\citep{stull2012introduction}. The thickness or height of the ABL varies throughout the day and depends on location. Mainly the height varies by the incidence of solar radiation on the surface, which makes the air parcels in contact with the surface acquire more flotation, generating convection.
+The planetary boundary layer or atmospheric boundary layer (ABL) is defined as the part of the troposphere that is in contact with the surface and that is directly influenced by surface forcings, such as friction, evaporation, heat transfer, emission of contaminants and by the soil~\citep{stull2012introduction}. The thickness or height of the ABL varies throughout the day and depends on the location. Mainly the height varies by the incidence of solar radiation on the surface, which makes the air parcels in contact with the surface acquire more flotation, generating convection.
 
 \begin{figure}[ht!]
 	\vspace{-5pt}
@@ -109,16 +107,16 @@ The planetary boundary layer or atmospheric boundary layer (ABL) is defined as t
   \vspace{-5pt}
 \end{figure}
 
-The figure~\ref{fig:ABL_structure} shows the structure and temporal evolution of the ABL, among its components are the mixing layer, the residual layer and the stable boundary layer. Each of these has special characteristics and different physical processes that distinguish them. To understand the dynamics of the planetary boundary layer it is necessary to define each of them. However, in this study, we focus mostly in the stable nocturnal boundary layer, because is during the occurrence of this layer that katabatic winds form~\citep{poulos2008observational, stull2012introduction}.
+The figure~\ref{fig:ABL_structure} shows the structure and temporal evolution of the ABL, its components are the mixing layer, the residual layer and the stable boundary layer. Each of these has special characteristics and different physical processes that distinguish them. To understand the dynamics of the planetary boundary layer it is necessary to define each of them. However, in this study, we focus mostly on the stable nocturnal boundary layer, because is during the occurrence of this layer that katabatic winds form~\citep{poulos2008observational, stull2012introduction}.
 
 \subsubsection{Stable boundary layer}
-The stable nocturnal boundary layer is formed during the night, when the sunlight stops reaching the ground . This layer is characterised by sporadic turbulence caused by wind shear and surface contact, with a tendency to suppress turbulence. The upper limit of the stable boundary layer is located at the height where the intensity of the turbulence is a small fraction of its surface value. The air in this layer is statically stable, opposed as its daytime equivalent, the mixed layer~\citep{stull2012introduction}.
+The stable nocturnal boundary layer is formed during the night when the sunlight stops reaching the ground. This layer is characterised by sporadic turbulence caused by wind shear and the contact with the surface, with a tendency to suppress turbulence. The upper limit of the stable boundary layer is located at the height where the intensity of the turbulence is a small fraction of its surface value. The air in this layer is statically stable, opposed as its daytime equivalent, the mixed layer~\citep{stull2012introduction}.
 
-When the stable boundary layer is formed, the air that is close to the ground cools down and can form drainage winds or katabatic winds, depending of the topography.
+When the stable boundary layer is formed, the air that is close to the ground cools down and can form drainage winds or katabatic winds, only if there is a slope in the topography.
 
 \subsection{Katabatic wind}
 
-The katabatic winds are local winds that are created in presence of a descending terrain gradient, when air masses flow downslope continuously being cooled by radiative processes near the ground. They are a ventilation mechanism in mountainous regions~\citep{manins1979model}. Normally, this winds are shallow, were the thickness of the jet can go from 2 to 20~m. They have velocities on the order of 1 to 5~m/s \citep{stull2012introduction}. 
+The katabatic winds are local winds that are created in presence of a descending terrain gradient when air masses flow downslope, continuously being cooled by radiative processes near the ground. They are a ventilation mechanism in mountainous regions~\citep{manins1979model}. Normally, these winds are shallow, where the thickness of the jet can go from 2 to 20~m. They have velocities on the order of 1 to 5~m/s \citep{stull2012introduction}. 
 
 \begin{figure}[ht!]
 	\vspace{-5pt}
@@ -129,9 +127,9 @@ The katabatic winds are local winds that are created in presence of a descending
   \vspace{-5pt}
 \end{figure}
 
-This winds characterise for having a velocity profile as the one shown in the red curve in figure~\ref{fig:u_profile}. We can see that near the surface the velocity grows with respect to the height, until it reaches a maximum and start to decrease. This is the theoretical velocity profile of the katabatic winds. Also in figure~\ref{fig:u_profile}, we can see in the green curve the profile for the potential temperature, where we the theoretical profile shows that it grows rapidly as we go up, until a point were it remains constant. This theoretical results can be useful to detect the occurrence of katabatic wind in the data sets.
+These winds are characterised for having a velocity profile as the one shown in the red curve in figure~\ref{fig:u_profile}. We can see that near the surface the velocity grows as we go up until it reaches a maximum and starts to decrease. This is the theoretical velocity profile of the katabatic winds. Also in figure~\ref{fig:u_profile}, we can see in the green curve the profile for the potential temperature, where we the theoretical profile shows that it grows rapidly as we go up until a point were it remains constant. This theoretical results can be useful to detect the occurrence of katabatic wind in the data sets.
 
-An important factor to highlight about the katabatic winds is that external factors like synoptic or mesoscale winds can alter or destroy this kind of local winds~\citep{stull2012introduction}. As is told by \cite{manins1979katabatic} katabatic winds are important under conditions of slack synoptic pressure gradients. This factor plays an important role in the planning of the field campaign because we want to measure the katabatic jet as undisturbed as possible. For this, we are looking for a meteorological window where anticyclonic conditions will be present. 
+An important factor to highlight about the katabatic winds is that external factors like synoptic or mesoscale winds can alter or destroy this kind of local winds~\citep{stull2012introduction}. The katabatic winds are important under conditions of slack synoptic pressure gradients~\citep{manins1979katabatic}. This factor plays an important role in the planning out the field campaign because we want to measure the katabatic jet as undisturbed as possible. For this, we are looking for a meteorological window when anticyclonic conditions will be present. 
 
 \subsection{Turbulence Kinetic Energy (TKE)}
 Commonly the TKE is defined as the kinetic energy per unit mass. This is one of the most important quantities to characterise turbulence in a flow, by giving us information about whether a region will become more turbulent, or whether turbulence will decay~\citep{stull2012introduction}.  Is defined as:
@@ -169,11 +167,16 @@ In this project, we are mostly concerned with the sensible heat flux and the mom
 Turbulence also involves motion. Thus we expect that turbulence transports
 quantities too
 
+\begin{equation}
+    F = \rho \ \overline{u'w'}.
+\end{equation}}
+
+
 \subsection{Reynolds Stress Tensor}
 
 
 \section{Methodology}
-My project is based on the work done by previous students, who made their master thesis on the same subject but with different data sets obtained from previous field campaigns. In Particular, \cite{jakob} processed the data of the 2015 campaign, that took place from 7 to 22 April 2015, during an episode anticyclonic conditions. In his work, he had to detect the days in which the instruments measured katabatic winds. For this, he used the historical of the meteorological report to see when there were anticyclonic weather conditions. Also, he analysed the wind profiles and temperature profiles to see if they fitted the description of the katabatic winds. After selecting the days, he computed the Reynolds stress tensor, the sensible heat flux and the turbulent kinetic energy. Is important to highlight that he analysed the region where the maximum of the velocity of the jet is expected to be. As a suggestion for future projects, he points out that it could be interesting to study the turbulence beneath the wind maximum, by placing more sensors in the lower levels of the masts (see section~\ref{instrumentation}).
+My project is based on the work done by previous students, who made their master thesis on the same subject but with different data sets obtained from previous field campaigns. In Particular, \cite{jakob} processed the data of the 2015 campaign, that took place from 7 to 22 April 2015, during an episode anticyclonic conditions. In his work, he had to detect the days in which the instruments measured katabatic winds. For this, he used the past records of the meteorological report to see when there were anticyclonic weather conditions. Also, he analysed the wind profiles and temperature profiles to see if they fitted the description of the katabatic winds. After selecting the days, he computed the Reynolds stress tensor, the sensible heat flux and the turbulent kinetic energy. Is important to highlight that he analysed the region where the maximum of the velocity of the jet is expected to be. As a suggestion for future projects, he points out that it could be interesting to study the turbulence beneath the wind maximum, by placing more sensors in the lower levels of the masts (see section~\ref{instrumentation}).
 
 Also, my work takes in to account the previous work done by \cite{claudine} and \cite{alban}. Both of them analysed the data from the November 2012 campaign. They followed the same methodology as \citeauthor{jakob} did, analysing the same turbulence characteristics of the jet. The main difference is that their work is focused on adapting the Prandtl analytical model with the different measurements recorded in the field. Another difference is that \citeauthor{claudine} did a spectral analysis of the data. This allowed her to represent the energy as a function of the frequency, with the objective to see the energy cascade characteristic of turbulence. 
 
@@ -237,11 +240,11 @@ January & 1 & Field Work\footnote{\label{note1}The date of the field campaign is
 \hline
 February & 7 & Field Work$^2$. Analysis of the data, start to analyse 2015 data to get familiar with EddyPro.\\
 \hline
-March & 4 & Analysis of the data gather during the field work.\\
+March & 4 & Analysis of the data gathered during the field work.\\
 \hline
-April & 7 & Writing and analysing the the data gathered.\\
+April & 7 & Writing and analysing the data gathered.\\
 \hline
-May & 12 & Plotting the results and final analysis of the data sets. Working in final report and oral presentation.\\
+May & 12 & Plotting the results and final analysis of the data sets. Working in the final report and oral presentation.\\
 \hline
 \end{tabular}
 \caption{Research project schedule showing the number of working days per month and the tasks to work on.}
