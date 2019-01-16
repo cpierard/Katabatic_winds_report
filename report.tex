@@ -9,7 +9,9 @@
 \usepackage{lmodern}
 \usepackage{textcomp}
 
-\usepackage{natbib}
+\usepackage[round]{natbib}
+%\usepackage{biblatex}
+%\addbibresource{references.bib}
 
 % \usepackage{babel}
 
@@ -23,6 +25,7 @@
 
 \usepackage{hyperref}
 
+\usepackage{gensymb}
 \hypersetup{
     colorlinks,
     linkcolor={red!50!black},
@@ -31,6 +34,8 @@
 }
 
 \usepackage{titling}
+
+%\interfootnotelinepenalty=10000
 
 \pretitle{%
 \includegraphics[width=0.3\linewidth]{fig/logo_UGA}
@@ -44,10 +49,17 @@
 \postdate{\par\end{center}\vspace{12cm}~}
 
 \usepackage[nottoc,numbib]{tocbibind}
-
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+\makesavenoteenv{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Measurements of Turbulence in Katabatic Winds }
-\author{Claudio PIERARD}
+\title{Measurements of Turbulence in Katabatic Wind}
+\author{Claudio PIERARD \\
+\\
+\\
+Master 1 Applied Mechanics\\
+\\
+Supervisor: Jean-Emmanuel Sicart}
 
 % to define new commands
 \newcommand{\R}{\mathcal{R}}
@@ -75,11 +87,159 @@
 
 \section{Introduction}
 
-\section{Context, social and scientific issues}
+Katabatic winds or gravity currents are downslope winds that are generated when cold dense air is accelerated down a topographic slope due to surface cooling that gives air a greater density than the free atmosphere~\citep{poulos2008observational}. They can be found in many places over the world, but they are mostly present in mountainous regions.
+%relevance
+Katabatic winds play an important role in the local weather and the dispersion of contaminants in the valleys~\citep{largeron2016persistent}. When there are They are the main 
+%scientific relevance
 
-\section{State of the art}
+\section{Theory}
 
-\bibliographystyle{jfm}
-\bibliography{./biblio}
+In this section we introduce and define some of the concepts necessary for this project, starting from the boundary layer structure to the specifics of the turbulent quantities necessary for its characterisation.
+
+\subsection{Boundary layer structure}
+The planetary boundary layer or atmospheric boundary layer (ABL) is defined as the part of the troposphere that is in contact with the surface and that is directly influenced by surface forcing, such as friction, evaporation, heat transfer, emission of contaminants and by the soil~\citep{stull2012introduction}. The thickness or height of the ABL varies throughout the day and depends on location. Mainly the height varies by the incidence of solar radiation on the surface, which makes the air parcels in contact with the surface acquire more flotation, generating convection.
+
+\begin{figure}[ht!]
+	\vspace{-5pt}
+    \centering
+\includegraphics[width=0.9\textwidth]{fig/abl_stull.png}
+    \caption{Diagram of the daily evolution of the structure of the ABL. Image based on the boundary layer scheme of \cite{stull2012introduction}.}
+    \label{fig:ABL_structure}
+  \vspace{-5pt}
+\end{figure}
+
+The figure~\ref{fig:ABL_structure} shows the structure and temporal evolution of the ABL, among its components are the mixing layer, the residual layer and the stable boundary layer. Each of these has special characteristics and different physical processes that distinguish them. To understand the dynamics of the planetary boundary layer it is necessary to define each of them, however, in this study the planetary boundary layer was studied globally, with emphasis only on its height.
+
+\subsubsection{Stable boundary layer}
+The stable nocturnal boundary layer is formed during the night. This layer is characterised by sporadic turbulence caused by wind shear and surface contact, but generally tends to suppress turbulence. The upper limit of the stable boundary layer is located at the height where the intensity of the turbulence is a small fraction of its surface value~\citep{stull2012introduction}.
+
+
+\subsection{Katabatic wind}
+
+\subsection{Turbulence Kinetic Energy (TKE)}
+Commonly the TKE is defined as the kinetic energy per unit mass. This is one of the most important quatities to characterise turbulence in a flow, by giving us information of wheter a region will become more turbulent, or whether turbulence will decay~\citep{stull2012introduction}.  Is defned as 
+
+\begin{equation}
+    e = \frac{1}{2} \big(\bar{u}^2 + \bar{v}^2 + \bar{w}^2\big). 
+    \label{eq:tke}
+\end{equation}
+
+ Using the Reynolds averaging method for the velocity components
+\begin{equation}
+   u_i = U_i + u'_i,
+   \label{eq:Re_avg}
+\end{equation}
+
+
+\noindent where $U_i$ is the average speed in one component and $u'_i$ is the fluctuations around that component. Substituting the previous equation in~\ref{eq:tke} and doing some simplification we get
+
+\begin{subequations}
+  \begin{align}
+    e &= \frac{1}{2} \big((\overline{U + u'})^2 + (\overline{V + v'})^2 + (\overline{W + w'})^2 \big), \\
+    &= \frac{1}{2} \big(\overline{u'^2} + \overline{v'^2} + \overline{w'^2}\big),
+  \end{align}
+  \label{eq:tke_2}
+\end{subequations}
+
+\noindent which is the definition of turbulent kinetic energy (TKE). The over-line represents the average of the variable. 
+
+\subsection{Covariance}
+
+
+\subsection{Eddy Flux}
+In this project we are mostly concerned with the sensible heat flux and the momentum flux in the katabatic jet. According to \cite{stull2012introduction}, a flux is 
+
+Turbulence also involves motion. Thus we expect that turbulence transports
+quantities too
+
+\subsection{Reynolds Stress Tensor}
+
+
+\section{Methodology}
+My project is based on the work done by previous students, who made their master thesis on the same subject but with different data sets obtained from previous field campaigns. In Particular, \cite{jakob} processed the data of the 2015 campaign, that took place from 7 to 22 April 2015, during an episode anticyclonic conditions. In his work, had to detect the days in which the instruments detected katabatic winds. For this, he used the historical meteorological report to see when there were anticyclonic weather conditions, and analysed the wind profiles and temperature profiles to see if they fitted the description of the katabatic winds. After selecting the days, he computed the Reynolds stress, the sensible heat flux and the turbulent kinetic energy. Is important to highlight that he analysed the region where the maximum of the velocity of the jet is expected to be. As a suggestion for future projects, he points out that it should be interesting to study the turbulence beneath the wind maximum, by placing more sensors in the lower levels of the masts (see section~\ref{instrumentation}).
+
+Also my work takes in to account the previous work done by \cite{claudine} and \cite{alban}. Both of them analysed the data from the November 2012 campaign. They followed the same methodology than \cite{jakob} did, analysing the same turbulence characteristics of the jet. The main difference is that their work is focus on adapting the Prandtl analytical model with the different measurements recorded in the field. Another difference is that \cite{claudine} did an spectral analysis of the data. This allowed her to to represent the energy as a function of the frequency, with the objective to see the energy cascade characteristic of turbulence. 
+
+\subsection{Objectives}
+My objectives for this research project will be to analyse the data from a new mission planned for this the months of January or February, in which there are more sensors installed specially in the bottom and lower region of the meteorological stations (see section~\ref{instrumentation}). This is meant to tackle the limitations found in the previous works mentioned above. 
+
+More specifically, the first step will be to pre-process the data using the EddyPro Software. Then, it will be necessary to detect the katabatic wind episodes in the data set. After that, I will analyses all the turbulent characteristics of the turbulent jet as \cite{jakob} did. And finally, I will do the spectral analysis of the data as \cite{claudine} did. 
+
+There exist the possibility that the meteorological conditions necessary to the measurements won't occur during winter or occur after February. In this case, I will analyse the data of 2015 and complete the analyse already done by \cite{jakob} by doing a spectral analysis of the signals, as \cite{claudine} did with the 2012 data sets.
+
+\subsection{Observational site}
+
+The field campaign is planned to be held in west face of the Grand Colon mountain, in Belledonne Massif, 10~km at the southeast of Grenoble. A topographic map of the area is shown in figure~\ref{fig:obs_site}, where the measuring site is marked with a red cross.
+
+\begin{figure}[!ht]
+  \begin{center}
+  \includegraphics[width=0.7\textwidth]{fig/grand_colon_jakob.png}
+  \caption{Topographic map of the Grand Colon. The red cross marks the location of the measuring site. Map from~\cite{jakob}.}
+  \label{fig:obs_site}
+  \end{center}
+\end{figure}
+
+The slope in the observational site is approximately of $21\degree$. The meteorological station is going to be located at an altitude of 1770 metres above sea level~\citep{claudine}. All the characterisation of the topography has been done by \cite{alban}.
+
+\subsection{Instrumentation} \label{instrumentation}
+The instruments for the next field campaign will be assembled into two masts, which will be located side by side. The mast have been reconfigured to tackle some of the problems and limitations from previous campaigns. We distinguish them by their height, one is 6~m high and the other is 12~m high\footnote{The configuration was altered recently, but couldn't get the most recent schematics. These will certainly change for the presentation.}. 
+
+In figure~\ref{fig:mast_6} we can see the mast that is 6~m high. In it there are 6 CSAT3 3-D Sonic Anemometers, positioned from 3.6~m to 0.4~m height. These are fixed parallel to the ground. These instruments measure the direction and speed of wind in its three components with a high frequency (around 20~Hz). Currently, Aravind Anandan is doing his research project on the calibration of this instruments and part of his work is calibrating them for this winter mission.
+
+\begin{figure}[!ht]
+  \begin{center}
+  \includegraphics[width=0.7\textwidth]{fig/0001.jpg}
+  \caption{Placement of the instruments on the 6~m mast. Along the mast, there are six CSAT3 Sonic Anemometers.}
+  \label{fig:mast_6}
+  \end{center}
+\end{figure}
+
+In figure~\ref{fig:mast_12} we see the mast that is 12~m high. At the top we can see a Windmaster 3D ultrasonic anemometer, that can measure the three components of wind with a frequency up to 20~Hz. Bellow it, we can see three Gill Windmaster anemometers, that are located between 9.5~m and 5.5~m. And at 4.2~m, there is an Vaissala 2D anemometer.  All the anemometers measure the direction and speed of wind with a frequency that depends of the model of the sensor. 
+
+Spread along the mast, there are nine thin film thermocouples, that are used to measure the temperature of air with minimal intrusion. Also, in the middle there is a radiometer used to measure the radiant flux. Finally, there is an ultrasonic instrument installed in the station (not shown in the figures) to record the height of the snow cover. Snow-covered ground is expected in the measuring site. This is important because the snow diminish the roughness of the ground.
+
+\begin{figure}[!ht]
+  \begin{center}
+  \includegraphics[width=0.7\textwidth]{fig/0002.jpg}
+  \caption{Placement of the instruments on the 12~m mast.}
+  \label{fig:mast_12}
+  \end{center}
+\end{figure}
+
+
+\section{Timetable}
+The timetable~\ref{table:schedule} shows the planning for the activities to do during the next five months. 
+
+\begin{table}[ht!]
+%\centering
+\begin{center}
+\begin{tabular}{|c|c|p{9.5cm}|}
+\hline
+  & \textbf{Working days} & \textbf{Activity} \\
+\hline
+January & 1 & Field Work\footnote{\label{note1}The date of the field campaign is not set. It must occur during winter (January and February), when there are anticyclonic conditions.}. Working on theory and foundations of the research.\\
+\hline
+February & 7 & Field Work$^2$. Analysis of the data, start to analyse 2015 data to get familiar with EddyPro.\\
+\hline
+March & 4 & Analysis of the data gather during the field work.\\
+\hline
+April & 7 & Writing and analysing the the data gathered.\\
+\hline
+May & 12 & Plotting the results and final analysis of the data sets. Working in final report and oral presentation.\\
+\hline
+\end{tabular}
+\caption{Research project schedule showing the number of working days per month and the tasks to work on.}
+\label{table:schedule}
+\end{center}
+\end{table}
+
+
+
+\clearpage
+%\medskip
+%\nocite{*}
+\bibliographystyle{plainnat}
+\bibliography{biblio}
+%\printbibliography
 
 \end{document}
