@@ -76,7 +76,8 @@ Supervisor: Jean-Emmanuel Sicart}
 
 \maketitle
 \begin{abstract}
-    Abstract goes here
+The study of katabatic winds is relevant because it influences the weather and pollution condition of the valleys in mountainous regions. We propose a field case study of the katabatic winds in the Belledonne Massif, with the objective of measuring the turbulence of the downslope jet and characterise it. We present the basic concepts necessary to study the katabatic winds and the objectives for the proposed project based on previous studies done by students that worked on it before. In the end, a work plan or schedule is presented which describes the activities to do during the next months.
+   
 \end{abstract}
 
 \newpage
@@ -146,7 +147,7 @@ Commonly the TKE is defined as the kinetic energy per unit mass. This is one of 
 \end{equation}
 
 
-\noindent where $U_i$ is the average speed in one component and $u'_i$ is the fluctuations around that component. Substituting the previous equation in~\ref{eq:tke} and doing some simplification we get
+\noindent where $U_i$ is the average speed in one component and $u'_i$ is the fluctuations around the average. Substituting the previous equation in~\ref{eq:tke} and doing some simplification we get
 
 \begin{subequations}
   \begin{align}
@@ -160,20 +161,39 @@ Commonly the TKE is defined as the kinetic energy per unit mass. This is one of 
 
 \subsection{Covariance}
 
-
-\subsection{Eddy Flux}
-In this project, we are mostly concerned with the sensible heat flux and the momentum flux in the katabatic jet. According to \cite{stull2012introduction}, a flux is 
-
-Turbulence also involves motion. Thus we expect that turbulence transports
-quantities too
+Recalling the classical definition of covariance between to variables, we have the relation 
 
 \begin{equation}
-    F = \rho \ \overline{u'w'}.
-\end{equation}}
+    \text{covar}(A,B) = \frac{1}{N}\sum_{i=0}^{N-1} (A_i - \overline{A})(B_i - \overline{B}).
+\end{equation}
 
+\noindent Using the Reynolds averaging method in the previous expression we get:
 
-\subsection{Reynolds Stress Tensor}
+\begin{subequations}
+\begin{align}
+    \text{covar}(A,B) &= \frac{1}{N}\sum_{i=0}^{N-1} a_i' b_i', \\
+    &= \overline{a'b'}.
+\end{align}
+\end{subequations}
 
+\noindent This is the mathematical definition of covariance for a turbulent flow. The covariance indicates the degree of common relationship between two variables~\citep{stull2012introduction}. Is the principle by which we define the eddy fluxes.
+
+\subsection{Eddy Flux}
+According to \cite{stull2012introduction}, a turbulent flux or eddy flux is the transport of a physical quantity by the effect of the turbulence. In this project, we are mostly concerned with the sensible heat flux and the momentum flux in the katabatic jet. The sensible heat flux is given by the expression:
+
+\begin{equation}
+    H = \rho \ C_p \ \overline{w'\theta'},
+\end{equation}
+
+\noindent where $C_p$ is the specific heat at constant pressure and $\theta '$ is the fluctuations in potential temperature. We are interested in the vertical flux of the sensible heat, that is why we use the vertical wind fluctuation $w'$.
+
+The momentum flux is given by the expression
+
+\begin{equation}
+    F = \rho \ \overline{u'w'}, 
+\end{equation}
+
+\noindent where $\rho$ is the density of air, and $u'$ and $w'$ are the fluctuations of velocity in the x-coordinate and in the vertical coordinate. The latter expression also is known as a component of the \textbf{Reynolds stress tensor}. The Reynolds stress describes all the components of the momentum flux in a control volume.
 
 \section{Methodology}
 My project is based on the work done by previous students, who made their master thesis on the same subject but with different data sets obtained from previous field campaigns. In Particular, \cite{jakob} processed the data of the 2015 campaign, that took place from 7 to 22 April 2015, during an episode anticyclonic conditions. In his work, he had to detect the days in which the instruments measured katabatic winds. For this, he used the past records of the meteorological report to see when there were anticyclonic weather conditions. Also, he analysed the wind profiles and temperature profiles to see if they fitted the description of the katabatic winds. After selecting the days, he computed the Reynolds stress tensor, the sensible heat flux and the turbulent kinetic energy. Is important to highlight that he analysed the region where the maximum of the velocity of the jet is expected to be. As a suggestion for future projects, he points out that it could be interesting to study the turbulence beneath the wind maximum, by placing more sensors in the lower levels of the masts (see section~\ref{instrumentation}).
@@ -193,7 +213,7 @@ The field campaign is planned to be held in the west face of the Grand Colon mou
 
 \begin{figure}[!ht]
   \begin{center}
-  \includegraphics[width=0.7\textwidth]{fig/grand_colon_jakob.png}
+  \includegraphics[width=0.8\textwidth]{fig/grand_colon_jakob.png}
   \caption{Topographic map of the Grand Colon. The red cross marks the location of the measuring site. Map from~\cite{jakob}.}
   \label{fig:obs_site}
   \end{center}
