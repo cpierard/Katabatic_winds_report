@@ -90,7 +90,7 @@ The study of katabatic winds is relevant because it influences the weather and p
 
 Katabatic winds or gravity currents are downslope winds that are generated when cold dense air is accelerated down a topographic slope due to surface cooling that gives the air a greater density than the free atmosphere~\citep{poulos2008observational}. They can be found in many places over the world, but they are mostly present in mountainous regions.
 
-Katabatic winds play an important role in the local weather and the dispersion of contaminants in the valleys. These winds can flow down the mountains and fill the cool air pools that accumulate in the valleys. This can result in temperature inversions, which have negative effects on urban valleys where pollution is present~\citep{largeron2016persistent}. Nowadays, katabatic winds are not well represented or parameterised in the mesoscale models for weather forecast and this can cause errors in the forecasts for mountainous regions. There have been several studies of katabatic winds historically, mostly centred in the alpine regions of Europe, some parts of North America, Greenland and Antarctica. Despite this, there is a lack of suitable data obtained from measurements that can be used to test or adapt the theoretical models of katabatic winds~\citep{manins1979katabatic}. This is why is relevant a field case study of these winds.
+Katabatic winds play an important role in the local weather and the dispersion of contaminants in the valleys. These winds can flow down the mountains and fill the cool air pools that accumulate in the valleys. This can result in temperature inversions, which have negative effects on urban valleys where pollution is present~\citep{largeron2016persistent}. Nowadays, katabatic winds are not well represented or parameterised in the mesoscale models for weather forecast and this can cause errors in the forecasts for mountainous regions. There have been several studies of katabatic winds historically, mostly centred in the alpine regions of Europe, some parts of North America, Greenland and Antarctica. Despite this, there is a lack of suitable data obtained from measurements that can be used to test or adapt the theoretical models of katabatic winds~\citep{manins1979katabatic}. Also, there are few studies of these winds on steep slopes, which makes our the field case study to be relevant.
 
 \section{Theory}
 
@@ -103,7 +103,7 @@ The planetary boundary layer or atmospheric boundary layer (ABL) is defined as t
 	\vspace{-5pt}
     \centering
 \includegraphics[width=0.9\textwidth]{fig/abl_stull.png}
-    \caption{Diagram of the daily evolution of the structure of the ABL. Image based on the boundary layer scheme of \cite{stull2012introduction}.}
+    \caption{Diagram of the daily evolution of the structure of the ABL. Image based on \cite{stull2012introduction}.}
     \label{fig:ABL_structure}
   \vspace{-5pt}
 \end{figure}
@@ -133,31 +133,14 @@ These winds are characterised for having a velocity profile as the one shown in 
 An important factor to highlight about the katabatic winds is that external factors like synoptic or mesoscale winds can alter or destroy this kind of local winds~\citep{stull2012introduction}. The katabatic winds are important under conditions of slack synoptic pressure gradients~\citep{manins1979katabatic}. This factor plays an important role in the planning out the field campaign because we want to measure the katabatic jet as undisturbed as possible. For this, we are looking for a meteorological window when anticyclonic conditions will be present. 
 
 \subsection{Turbulence Kinetic Energy (TKE)}
-Commonly the TKE is defined as the kinetic energy per unit mass. This is one of the most important quantities to characterise turbulence in a flow, by giving us information about whether a region will become more turbulent, or whether turbulence will decay~\citep{stull2012introduction}.  Is defined as:
+The TKE is defined as the kinetic energy per unit mass. This is one of the most important quantities to characterise turbulence in a flow, by giving us information about whether a region will become more turbulent, or whether turbulence will decay~\citep{stull2012introduction}.  Is defined as:
 
 \begin{equation}
-    e = \frac{1}{2} \big(\bar{u}^2 + \bar{v}^2 + \bar{w}^2\big). 
+    e = \frac{1}{2} \big(\overline{u'^2} + \overline{v'^2} + \overline{w'^2}\big). 
     \label{eq:tke}
 \end{equation}
 
- Using the Reynolds averaging method for the velocity components
-\begin{equation}
-   u_i = U_i + u'_i,
-   \label{eq:Re_avg}
-\end{equation}
-
-
-\noindent where $U_i$ is the average speed in one component and $u'_i$ is the fluctuations around the average. Substituting the previous equation in~\ref{eq:tke} and doing some simplification we get
-
-\begin{subequations}
-  \begin{align}
-    e &= \frac{1}{2} \big((\overline{U + u'})^2 + (\overline{V + v'})^2 + (\overline{W + w'})^2 \big), \\
-    &= \frac{1}{2} \big(\overline{u'^2} + \overline{v'^2} + \overline{w'^2}\big),
-  \end{align}
-  \label{eq:tke_2}
-\end{subequations}
-
-\noindent which is the definition of turbulent kinetic energy (TKE). The over-line represents the average of the variable. 
+\noindent where $e$ is the definition of turbulent kinetic energy (TKE). Is the sum of the variances of the wind components fluctuation. The over-line represents the average of the variable. 
 
 \subsection{Covariance}
 
@@ -176,10 +159,10 @@ Recalling the classical definition of covariance between to variables, we have t
 \end{align}
 \end{subequations}
 
-\noindent This is the mathematical definition of covariance for a turbulent flow. The covariance indicates the degree of common relationship between two variables~\citep{stull2012introduction}. Is the principle by which we define the eddy fluxes.
+\noindent This is the mathematical definition of covariance. The covariance indicates the degree of common relationship between two variables. Is the principle by which we define the eddy fluxes.
 
 \subsection{Eddy Flux}
-According to \cite{stull2012introduction}, a turbulent flux or eddy flux is the transport of a physical quantity by the effect of the turbulence. In this project, we are mostly concerned with the sensible heat flux and the momentum flux in the katabatic jet. The sensible heat flux is given by the expression:
+According to \cite{stull2012introduction}, a turbulent flux or eddy flux is the transport of a physical quantity by the effect of the turbulence. In this project, we are mostly concerned with the sensible heat flux and the momentum flux. The sensible heat flux is given by the expression:
 
 \begin{equation}
     H = \rho \ C_p \ \overline{w'\theta'},
@@ -193,10 +176,10 @@ The momentum flux is given by the expression
     F = \rho \ \overline{u'w'}, 
 \end{equation}
 
-\noindent where $\rho$ is the density of air, and $u'$ and $w'$ are the fluctuations of velocity in the x-coordinate and in the vertical coordinate. The latter expression also is known as a component of the \textbf{Reynolds stress tensor}. The Reynolds stress describes all the components of the momentum flux in a control volume.
+\noindent where $\rho$ is the density of air, and $u'$ and $w'$ are the fluctuations of velocity in the x-coordinate and in the vertical coordinate. The x-coordinate follows the slope and the z-coordinate is perpendicular to the slope. The latter expression also is known as a component of the \textbf{Reynolds stress tensor}. The Reynolds stress describes all the components of the momentum flux in a control volume.
 
 \section{Methodology}
-My project is based on the work done by previous students, who made their master thesis on the same subject but with different data sets obtained from previous field campaigns. In Particular, \cite{jakob} processed the data of the 2015 campaign, that took place from 7 to 22 April 2015, during an episode anticyclonic conditions. In his work, he had to detect the days in which the instruments measured katabatic winds. For this, he used the past records of the meteorological report to see when there were anticyclonic weather conditions. Also, he analysed the wind profiles and temperature profiles to see if they fitted the description of the katabatic winds. After selecting the days, he computed the Reynolds stress tensor, the sensible heat flux and the turbulent kinetic energy. Is important to highlight that he analysed the region where the maximum of the velocity of the jet is expected to be. As a suggestion for future projects, he points out that it could be interesting to study the turbulence beneath the wind maximum, by placing more sensors in the lower levels of the masts (see section~\ref{instrumentation}).
+My project is based on the work done by previous students, who made their master thesis on the same subject but with different data sets obtained from previous field campaigns. In Particular, \cite{jakob} processed the data of the 2015 campaign, that took place from 7 to 22 April 2015, during an episode of anticyclonic conditions. In his work, he had to detect the days in which the instruments measured katabatic winds. For this, he used the past records of the meteorological report to see when there were anticyclonic weather conditions. Also, he analysed the wind profiles and temperature profiles to see if they fitted the description of the katabatic winds. After selecting the days, he computed the Reynolds stress tensor, the sensible heat flux and the turbulent kinetic energy. Is important to highlight that he analysed the region where the maximum of the velocity of the jet is expected to be. As a suggestion for future projects, he points out that it could be interesting to study the turbulence beneath the wind maximum, by placing more sensors in the lower levels of the masts (see section~\ref{instrumentation}).
 
 Also, my work takes in to account the previous work done by \cite{claudine} and \cite{alban}. Both of them analysed the data from the November 2012 campaign. They followed the same methodology as \citeauthor{jakob} did, analysing the same turbulence characteristics of the jet. The main difference is that their work is focused on adapting the Prandtl analytical model with the different measurements recorded in the field. Another difference is that \citeauthor{claudine} did a spectral analysis of the data. This allowed her to represent the energy as a function of the frequency, with the objective to see the energy cascade characteristic of turbulence. 
 
@@ -219,12 +202,12 @@ The field campaign is planned to be held in the west face of the Grand Colon mou
   \end{center}
 \end{figure}
 
-The slope in the observational site is $21\degree$. The meteorological station is going to be located at an altitude of 1770 metres above sea level~\citep{claudine}. All the characterisation of the topography has been done by \cite{alban}.
+The slope in the observational site is around $21\degree$. The meteorological station is going to be located at an altitude of 1770 metres above sea level~\citep{claudine}. All the characterisation of the topography has been done by \cite{alban}.
 
 \subsection{Instrumentation} \label{instrumentation}
 The instruments for the next field campaign will be assembled into two masts, which will be located side by side. The mast has been reconfigured to tackle some of the problems and limitations from previous campaigns. We distinguish them by their height, one is 6~m high and the other is 12~m high\footnote{The configuration was altered recently, but couldn't get the most recent schematics. These will certainly change for the presentation.}. 
 
-In figure~\ref{fig:mast_6} we can see the mast that is 6~m high. In it, there are 6 CSAT3 3-D Sonic Anemometers, positioned from 3.6~m to 0.4~m height. These are fixed parallel to the ground. These instruments measure the direction and speed of wind in its three components with a high frequency (around 20~Hz). Currently, Aravind Anandan is doing his research project on the calibration of this instruments and part of his work is calibrating them for this winter mission.
+In figure~\ref{fig:mast_6} we can see the mast that is 6~m high. In it, there are 6 CSAT3 3-D Sonic Anemometers, positioned from 0.4~m to 3.6~m height. These are fixed parallel to the ground. These instruments measure the direction and speed of wind in its three components with a high frequency (around 20~Hz). Currently, Aravind Anandan is doing his research project on the calibration of this instruments and part of his work is calibrating them for this winter mission.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -236,7 +219,7 @@ In figure~\ref{fig:mast_6} we can see the mast that is 6~m high. In it, there ar
 
 In figure~\ref{fig:mast_12} we see the mast that is 12~m high. At the top we can see a Windmaster 3D ultrasonic anemometer, that can measure the three components of wind with a frequency up to 20~Hz. Bellow it, we can see three Gill Windmaster anemometers, that are located between 9.5~m and 5.5~m. And at 4.2~m, there is a Vaisala 2D anemometer.  All the anemometers measure the direction and speed of wind with a frequency that depends on the model of the sensor. 
 
-Spread along the mast, there are nine thin film thermocouples, that are used to measure the temperature of air with minimal intrusion. In the middle, there is a radiometer used to measure the radiant flux. Finally, there is an ultrasonic instrument installed in the station (not shown in the figures) to record the height of the snow cover. Snow-covered ground is expected in the measuring site. This is important because the snow diminishes the roughness of the ground.
+Spread along the mast, there are nine thin film thermocouples, that are used to measure the temperature of air with minimal intrusion. In the middle, there is a radiometer used to measure the radiant flux. Finally, there is an ultrasonic instrument installed in the station (not shown in the figures) to record the height of the snow cover. Snow-covered ground is expected in the measuring site. This is important because the snow decreases the height between the ground and the instruments, which is an important parameter in the calculations.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -277,7 +260,7 @@ May & 12 & Plotting the results and final analysis of the data sets. Working in 
 \clearpage
 %\medskip
 %\nocite{*}
-\bibliographystyle{plainnat}
+\bibliographystyle{apalike}
 \bibliography{biblio}
 %\printbibliography
 
