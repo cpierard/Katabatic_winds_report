@@ -4,7 +4,7 @@ The field campaign occurred in the west face of the Grand Colon mountain (2394~m
 
 \begin{figure}[!ht]
   \begin{center}
-  \includegraphics[width=0.8\textwidth]{fig/chapter_1/grenoble_slopes_C100.png}
+  \includegraphics[width=0.8\textwidth]{fig/chapter_3/grenoble_slopes_C100.png}
   \caption{Topographic map showing the slopes of the region. The green star marks the position of the measuring site. The black dot marks the localisation of Grenoble. Data obtained from Shuttle Radar Topography Mission using the GMTSAR processing system~\citep{sandwell2011gmtsar}.}
   \label{fig:obs_site}
   \end{center}
@@ -15,7 +15,7 @@ has a relatively homogeneous slope, which fulfils the essential characteristics 
 
 \begin{figure}[!ht]
   \begin{center}
-  \includegraphics[width=0.5\textwidth]{fig/chapter_1/grenoble_slopes_C100_zoom.png}
+  \includegraphics[width=0.5\textwidth]{fig/chapter_3/grenoble_slopes_C100_zoom.png}
   \caption{Zoomed slope map of the area of study. The green star marks the localisation of the instruments.}
   \label{fig:obs_site_zoom}
   \end{center}
@@ -60,14 +60,27 @@ The anemometers used were the CSAT3 and CSAT3B~\footnote{The CSAT3B is the most 
     \label{tab:intruments_anemometers}
 \end{table}
 
-An important aspect of the anemometers is its orientation and alignment with respect to the slope. In this case, we aligned all the anemometers in a manner that the horizontal wind components of the instruments were parallel to the slope surface and the vertical wind component perpendicular to the surface (you can see how the instruments are tilted, following the slope of the mountain, in the figure~\ref{}). The orientation of the instruments was different for the CSAT3, the Windsonic 2-D and the Windmaster Pro. The CSAT3 and CSAT3B were oriented towards the south (180~$\degree$ North off-set), in a way that the $v$ component of the wind was facing the slope (eastwards) and the $u$ was facing the right side of the slope (southwards). The Windsonic 2-D was oriented towards the West (270~$\degree$ North off-set) in a manner that the negative $u$ component was facing the slope (it was facing the towards the valley or towards the West). And the Windmaster Pro was facing towards the slope or facing East (90~$\degree$ North off-set).
+An important aspect of the anemometers is its orientation and alignment with respect to the slope. In this case, we aligned all the anemometers in a manner that the horizontal wind components of the instruments were parallel to the slope surface and the vertical wind component perpendicular to the surface (you can see how the instruments are tilted, following the slope of the mountain, in the figure~\ref{fig:mast_pics}). The orientation of the instruments was different for the CSAT3, the Windsonic 2-D and the Windmaster Pro. The CSAT3 and CSAT3B were oriented towards the south (180~$\degree$ North off-set), in a way that the $v$ component of the wind was facing the slope (eastwards) and the $u$ was facing the right side of the slope (southwards). The Windsonic 2-D was oriented towards the West (270~$\degree$ North off-set) in a manner that the negative $u$ component was facing the slope (it was facing the towards the valley or towards the West). And the Windmaster Pro was facing towards the slope or facing East (90~$\degree$ North off-set).
 
 \begin{figure}[!ht]
   \begin{center}
-  \includegraphics[width=0.7\textwidth]{fig/chapter_1/Montage_J1.png}
-  \caption{Placement of the instruments on the 6~m mast. Along the mast, there are six CSAT3 Sonic Anemometers.}
+  \includegraphics[width=0.7\textwidth]{fig/chapter_3/Montage_J1.png}
+  \caption{Scheme of the principal mast with the position and label of the instruments.}
   \label{fig:mast}
   \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \begin{subfigure}[b]{0.308\textwidth}
+        \includegraphics[width=\textwidth]{fig/chapter_3/foto_1_small.jpg}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{fig/chapter_3/foto_3_small.jpg}
+    \end{subfigure}
+    \caption{To the left, we can see a picture of the principal mast viewed from the side and at the back is possible to see the small mast. In the picture in the right we can see a zoom on the CSAT3 anemometers viewed from bellow.}
+    \label{fig:mast_pics}
 \end{figure}
 
 Spread along the mast, there are ten thin film thermocouples, that were used to measure the air temperature with a minimal intrusion at high frequency (20~Hz). The initial heights of these instruments are shown in table~\ref{tab:intruments_thermocouples} and can be seen in figure~\ref{fig:mast} at the left of the mast, opposite to the anemometers.
@@ -115,7 +128,7 @@ During the month of February, between the 10th and the 28th,  Grenoble had antic
 
 In total around 11.5~GB were obtained during the campaign, only taking into account the anemometers, the thermocouples and the meteorological station. The processing of the data depended on the instrument and its frequency of operation. 
 
-\subsubsection{EddyPro data processing}
+\subsubsection{CSAT3 and Windmaster Pro}
 
 For the CSAT3 anemometers and the Windmaster Pro we used EddyPro, which is a software that uses the eddy covariance method to compute atmospheric fluxes of certain trace gases, heat flux and energy~\citep{burba2013eddy}. EddyPro computes the averages of each of the components of the wind and the temperature for a certain period of time which we choose. After this, it computes the fluctuations of the variables and computes the covariance between them. There are multiple choices for software that can do this but EddyPro integrates different functions and methods that improve the quality of the output. 
 
@@ -125,9 +138,12 @@ Due to the number of days the instruments were operating and the high frequency 
 
 After identifying three potentially good nights for katabatic winds episodes, we went back to EddyPro and processed the data using a 5~minutes average period, which works better to analyse the turbulent characteristics of the flow and the respective fluxes. 
 
-\subsubsection{Thermocouples and WindSonic anemometers}
+\subsubsection{Thermocouples and Windsonic 2-D anemometers}
 
+As mentioned before, the raw data of the thermocouples have a frequency of 20~Hz, and the raw from the Windsonic anemometers has a value each 5~minutes. Both instruments are incompatible with EddyPro because they do not measure wind velocity and temperature simultaneously, which makes them unfit for the eddy covariance method used by the software. This is why for these instruments it was necessary to write a script to compute the average at a different frequency. As with the 3-D sonic anemometers, first, we did a 30 minutes average of the data for both type of instruments, to be able to analyse and detect the best nights to observe katabatic wind. After determining the ideal nights, we performed and 5~minute average of the raw data.
 
+\subsection{Temperature comparison between thermocouples and CSAT3 anemometers}
 
+With the 30~minute averaged data, we compared the temperature measured by the CSAT3 instruments with respect to the temperature of the thermocouples. We did this to verify that the temperature of the sonic anemometers was consistent because this temperature is used to compute the heat fluxed, which is an important aspect of the flow. 
 
-
+For this, we selected a thermocouple and a CSAT3 placed at the same height or very close in height to one another. 
