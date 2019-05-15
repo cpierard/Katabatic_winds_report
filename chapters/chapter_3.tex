@@ -23,9 +23,18 @@ has a relatively homogeneous slope, which fulfils the essential characteristics 
 
 \subsection{Instrumentation} \label{instrumentation}
 
-The instruments placed in the filed where mounted into two masts. The principal mast measured 10.10~m and on it were mounted 11 sonic anemometer and 10 thermocouples (see figure~\ref{fig:mast}). There was a smaller mast with a meteorological station placed a few meters apart from the main mast. It measured temperature, humidity and incident and reflect radiation. In the big mast, there were four types of anemometers with different characteristics and only one type of thermocouple.
+The instruments placed in the filed where mounted into two masts. The principal mast measured 10.10~m and on it were mounted 11 sonic anemometer and 10 thermocouples (see figure~\ref{fig:mast}). There was a smaller mast with a meteorological station placed a few meters apart from the main mast. 
 
-The anemometers used were the CSAT3 and CSAT3B~\footnote{The CSAT3B is the most recent version of the CSAT3 but share the same aspect generally.} 3-D sonic anemometers manufactured by Campbells Scientific, which measure three components of the wind with a frequency of 20~Hz. In total there were five CSAT3 and only one CSAT3B. Also, we used four Windsonic 2-D sonic anemometers manufactured by Gill Instruments. This anemometer measures two components of the wind that are aligned to the "plane" of the instrument. At the top of the mast, a Windmater Pro Sonic Anemometer (from Gill Instruments) was placed. As the CSAT3, it measured three components of the wind with a frequency of 20~Hz. In the table~\ref{tab:intruments_anemometers} is possible to see the initial heights at which the anemometers were placed with respect to the ground. 
+On the small mast, or meteorological mast, there were the following instruments installed: 
+\begin{itemize}
+    \item CS100 standard barometer (Campbell Scientific), for atmospheric pressure.
+    \item CNR1 net radiometer sensor (Campbell Scientific), for short and long wavelength radiation.
+    \item IR120 infrared radiometer (Campbell Scientific), for measuring the longwave radiation emitted by the ground.
+    \item CS125 temperature and relative humidity sensor (Campbell Scientific).
+    \item SR50 sonic ranging sensor (Campbell Scientific), for measuring the position of the sensors relative to the ground.
+\end{itemize}
+
+In the big mast there were four types of anemometers with different characteristics and only one type of thermocouple. The anemometers used were the CSAT3 and CSAT3B~\footnote{The CSAT3B is the most recent version of the CSAT3 but share the same aspect generally.} 3-D sonic anemometers manufactured by Campbells Scientific, which measure three components of the wind with a frequency of 20~Hz. In total there were five CSAT3 and only one CSAT3B. Also, we used four Windsonic 2-D sonic anemometers manufactured by Gill Instruments. This anemometer measures two components of the wind that are aligned to the "plane" of the instrument. At the top of the mast, a Windmater Pro Sonic Anemometer (from Gill Instruments) was placed. As the CSAT3, it measured three components of the wind with a frequency of 20~Hz. In the table~\ref{tab:intruments_anemometers} is possible to see the initial heights at which the anemometers were placed with respect to the ground. 
 
 \begin{table}[!ht]
     \centering
@@ -64,7 +73,7 @@ An important aspect of the anemometers is its orientation and alignment with res
 
 \begin{figure}[!ht]
   \begin{center}
-  \includegraphics[width=0.7\textwidth]{fig/chapter_3/Montage_J1.png}
+  \includegraphics[width=0.7\textwidth]{fig/chapter_3/Montage.jpg}
   \caption{Scheme of the principal mast with the position and label of the instruments.}
   \label{fig:mast}
   \end{center}
@@ -136,7 +145,7 @@ The raw data of the sonic anemometers is in ASCII format, which EddyPro con read
 
 Due to the number of days the instruments were operating and the high frequency of acquisition, it was convenient to use a relatively large period for averaging to try to identify the days when there were good conditions for katabatic winds to form. For this reason, we processed the data doing 30 minutes averages for both the CSAT3 anemometers and the Windmaster Pro. This type of average works as a low-pass filter for the raw high-frequency signal, where all the turbulent fluctuations of the variables are lost. For this reason, is only convenient to use this 30~minutes averaged data to identify potential good periods with the required conditions and not to analyse the turbulent characteristics of the flow
 
-After identifying three potentially good nights for katabatic winds episodes, we went back to EddyPro and processed the data using a 5~minutes average period, which works better to analyse the turbulent characteristics of the flow and the respective fluxes. 
+After identifying three potentially good nights for katabatic winds episodes, we went back to EddyPro and processed the data using a 5~minutes average period, which works better to analyse the turbulent characteristics of the flow and the respective fluxes. In particular we computed the sensible heat flux ($\overline{w'\theta'}$), the momentum flux ($\overline{u'w'}$) and the turbulent kinematic energy (TKE).
 
 \subsubsection{Thermocouples and Windsonic 2-D anemometers}
 
@@ -146,4 +155,32 @@ As mentioned before, the raw data of the thermocouples have a frequency of 20~Hz
 
 With the 30~minute averaged data, we compared the temperature measured by the CSAT3 instruments with respect to the temperature of the thermocouples. We did this to verify that the temperature of the sonic anemometers was consistent because this temperature is used to compute the heat fluxed, which is an important aspect of the flow. 
 
-For this, we selected a thermocouple and a CSAT3 placed at the same height or very close in height to one another. 
+For this, we selected a thermocouple and a CSAT3 placed at the same height or very close in height to one another. From figure~\ref{fig:mast} and the tables~\ref{tab:intruments_anemometers}~and~\ref{tab:intruments_thermocouples} is possible to see that the CSAT3B and the Thermocouple No.1 are very close in height, only 1.5~cm of difference. Also, the CSAT3 No.5 and the Thermocouple No.5 are very close with 2~cm of difference. To this data, we did a calibration plot of the temperature of both instruments (CSAT3 vs Thermocouple) and computed the correlation coefficient. This gave us an insight into how well the measurements of temperature obtained from the CSAT3 are. 
+
+\subsection{Wind speed comparison between CSAT3 and Windsonic 2D anemometers}
+
+As in the previous section, and because we have three types of anemometers installed in the mast, it was necessary to check that the measurements of the wind speed were consistent between instruments. For this, we selected the closest CSAT3 to the WINDSONIC 2D no.3, which is the closest to the ground from the Windsonic's installed. The CSAT· No.1 is the closest one to this instrument, with a vertical separation of 72~cm. For this we only compared the wind speed of both instruments, disregarding the wind direction, and did a scatter plot for both instruments, computing the correlation coefficient. 
+
+The comparison between the Windmaster Pro and the Windsonic 2-D was not performed because the separation between the closest Windsonic anemometer to the wind master on the top is of around 2~m. 
+
+\subsection{Wind direction correction}
+
+When analysing the wind direction data from all the anemometers we saw that there where inconsistencies withe the wind direction of the CSAT3B anemometer, placed at the bottom of the mast. We found out that there was a systematic deviation of $+90\degree$ with respect to the other CSAT3 instruments, and the variation of the angle was inverted with respect to the other CSAT3's. To identify this we did a calibration plot between the wind direction of the CSAT3B and the CSAT3 No.5, which is the closest one to the CSAT3B, and proposed a correction, which we implemented when analysing the data.
+
+\subsection{Ground temperature and temperature gradients}
+
+Using the data from the radiometer IR120 installed in the small mast, in specific the longwave emitted radiation from the ground, we computed the ground temperature using the Stephan-Boltzmann Law:
+
+\begin{equation}
+    I = \sigma T^4, 
+\end{equation}
+
+\noindent which relates the radiant emittance with respect to the temperature of a body, where $\sigma = 5.67 \times 10^{-8} W m^{-2} K^{-4}$, is the Stephan-Boltzmann, and $T$ is the body temperature. Solving for $T$ and using the longwave emitted radiation from the ground as $I$, we computed the time series of the temperature of the ground.
+
+With the ground temperature, we computed the temperature gradient between the ground and the CSAT3 No.4. We choose the CSAT3 No.4 because is placed in the middle of the CSAT3 array and is not to close to the ground. To compute the gradient we did the operation:
+
+\begin{equation}
+    \text{grad}_z T = \frac{T_{csat} - T_{grd}}{h_{csat} - h_{grd}},
+\end{equation}
+
+\noindent where $T_{csat}$ and $T_{grd}$ are the CSAT3 No.4 and ground temperature respectively at certain time. The height of both instruments are the variables $h_{csat}$ and $h_{grd}$ respectively. Because this height is measured with respect to the ground, $h_{grd} = 0$, and we use the corresponding value of the height of the CSAT3 No.4 at each particular time. 
