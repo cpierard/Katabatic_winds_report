@@ -1,4 +1,5 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper, 12pt, twoside]{article}
+\usepackage[top=1.2in,bottom=1.2in,left=3.cm,right=3.cm,a4paper]{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath, amsfonts}
 \usepackage{amssymb}
@@ -22,8 +23,6 @@
 
 % \usepackage{titlesec}
 
-\usepackage[top=1.2in,bottom=1.2in,left=3.cm,right=3.cm,a4paper]{geometry}
-
 \usepackage[font=footnotesize]{caption}
 
 \usepackage{xcolor}
@@ -42,6 +41,8 @@
 
 %\interfootnotelinepenalty=10000
 
+
+
 \pretitle{%
 \includegraphics[width=0.3\linewidth]{fig/logo_UGA}
 \vspace{2cm}
@@ -58,13 +59,15 @@
 \makesavenoteenv{tabular}
 \makesavenoteenv{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% COVER %%%%%%%%%%%%%%%%%%%%%
+
 \title{Measurements of Turbulence in Katabatic Wind on a steep slope}
 \author{Claudio Pierard \\
 \\
+Supervisor: Dr. Jean-Emmanuel Sicart
 \\
-Master 1 Applied Mechanics\\
-\\
-Supervisor: Dr. Jean-Emmanuel Sicart}
+Master 1 Applied Mechanics\\}
+
 
 % to define new commands
 \newcommand{\R}{\mathcal{R}}
@@ -80,6 +83,10 @@ Supervisor: Dr. Jean-Emmanuel Sicart}
 \renewcommand{\labelitemi}{$\bullet$}
 
 \maketitle
+
+\empty
+
+%\chapter*{Abstract}
 \begin{abstract}
 [Must modify this abstract] The study of katabatic winds is relevant because it influences the weather and pollution condition of the valleys in mountainous regions. We propose a field case study of the katabatic winds in the Belledonne Massif, with the objective of measuring the turbulence of the downslope jet and characterise it. We present the basic concepts necessary to study the katabatic winds and the objectives for the proposed project based on previous studies done by students that worked on it before. In the end, a work plan or schedule is presented which describes the activities to do during the next months.
    
@@ -87,7 +94,14 @@ Supervisor: Dr. Jean-Emmanuel Sicart}
 
 \newpage
 
+\section*{Acknowledgements}
+
+\newpage
+
 \tableofcontents
+\newpage
+\listoffigures
+\listoftables
 
 \newpage
 
