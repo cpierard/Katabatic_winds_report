@@ -1,6 +1,4 @@
-In this section we introduce and define some of the concepts that were necessary for this project.
-
-\subsection{Boundary layer structure}
+\section{Boundary layer structure}
 The planetary boundary layer or atmospheric boundary layer (ABL) is defined as the part of the troposphere that is in contact with the surface and that is directly influenced by surface forcings, such as friction, evaporation, heat transfer, emission of contaminants and by the soil~\citep{stull2012introduction}. The thickness or height of the ABL varies throughout the day and depends on the location. Mainly the height varies by the incidence of solar radiation on the surface, which makes the air parcels in contact with the surface acquire more flotation, generating convection.
 
 \begin{figure}[ht!]
@@ -14,12 +12,12 @@ The planetary boundary layer or atmospheric boundary layer (ABL) is defined as t
 
 The figure~\ref{fig:ABL_structure} shows the structure and temporal evolution of the ABL, its components are the mixing layer, the residual layer and the stable boundary layer. Each of these has special characteristics and different physical processes that distinguish them. To understand the dynamics of the planetary boundary layer it is necessary to define each of them. However, in this study, we focus mostly on the stable nocturnal boundary layer because in the presence of this layer katabatic winds form~\citep{poulos2008observational, stull2012introduction}.
 
-\subsubsection{Stable boundary layer}
-The stable nocturnal boundary layer is formed during the night when the sunlight stops reaching the ground and therefore starts cooling down. This layer is characterised by sporadic turbulence caused by wind shear and the contact with the surface, which tends to suppress turbulence. The upper limit of the stable boundary layer is located at the height where the intensity of the turbulence is a small fraction of its surface value. The air in this layer is statically stable, opposed as its daytime equivalent, the mixed layer~\citep{stull2012introduction}.
+\subsection{Stable boundary layer}
+The stable nocturnal boundary layer is formed during the night when the sunlight stops reaching the ground, which starts cooling down the air that is in contact with it. This layer is characterised by sporadic turbulence caused by wind shear at the surface, which tends to suppress turbulence. The upper limit of the stable boundary layer is located at the height where the intensity of the turbulence is a small fraction of its surface value. The air in this layer is statically stable, opposed as its daytime equivalent, the mixed layer~\citep{stull2012introduction}.
 
 When the stable boundary layer is formed, the air that is close to the ground cools down and can form drainage winds or katabatic winds, over a slope in the topography.
 
-\subsection{Katabatic wind} \label{sec:katabatic_winds}
+\section{Katabatic wind} \label{sec:katabatic_winds}
 
 The katabatic winds are local winds that are created over a descending terrain gradient when air masses flow downslope, being cooled by radiative processes near the ground. These winds are a ventilation mechanism in mountainous regions~\citep{manins1979model}. Normally, these winds are shallow, where the thickness of the jet can go up to 2-3~m, with velocities on the order of 1 to 5~m/s \citep{stull2012introduction}. 
 
@@ -36,9 +34,9 @@ These winds are characterised for having a velocity profile as the one shown in 
 
 An important factor to highlight about the katabatic winds is that external factors like synoptic or mesoscale winds can alter or destroy this kind of local winds~\citep{stull2012introduction}. The katabatic winds are important under conditions of slack synoptic pressure gradients~\citep{manins1979katabatic}. This factor plays an important role in the planning out the field campaign because we want to measure the katabatic jet as undisturbed as possible.
 
-%\subsection{Governing equations}
+%\section{Governing equations}
 
-\subsection{Turbulence Kinetic Energy (TKE)}
+\section{Turbulence Kinetic Energy (TKE)}
 The TKE is defined as the kinetic energy per unit mass. This is one of the most important quantities to characterise turbulence in a flow, by giving us information about whether a region will become more turbulent, or whether turbulence will decay~\citep{stull2012introduction}.  Is defined as:
 
 \begin{equation}
@@ -48,7 +46,7 @@ The TKE is defined as the kinetic energy per unit mass. This is one of the most 
 
 \noindent where $TKE$ is the definition of turbulent kinetic energy (TKE). Is the sum of the variances of the wind components fluctuation. The over-line represents the average of the variable. 
 
-\subsection{Covariance}
+\section{Covariance}
 
 Recalling the classical definition of covariance between to variables, we have the relation 
 
@@ -67,7 +65,7 @@ Recalling the classical definition of covariance between to variables, we have t
 
 \noindent This is the mathematical definition of covariance. The covariance indicates the degree of common relationship between two variables. Is the principle by which we define the eddy fluxes.
 
-\subsection{Eddy Flux}
+\section{Eddy Flux}
 According to \cite{stull2012introduction}, a turbulent flux or eddy flux is the transport of a physical quantity by the effect of the turbulence. In this project, we are mostly concerned with the sensible heat flux and the momentum flux. The sensible heat flux is given by the expression:
 
 \begin{equation}
@@ -79,11 +77,11 @@ According to \cite{stull2012introduction}, a turbulent flux or eddy flux is the 
 The momentum flux is given by the expression
 
 \begin{equation}
-    F = \rho \ \overline{u'w'}, 
+    \tau = \rho \ \overline{u'w'}, 
 \end{equation}
 
 \noindent where $\rho$ is the density of air, and $u'$ and $w'$ are the fluctuations of velocity in the x-coordinate and in the vertical coordinate. The x-coordinate follows the slope and the z-coordinate is perpendicular to the slope. The latter expression also is known as a component of the \textbf{Reynolds stress tensor}. The Reynolds stress describes all the components of the momentum flux in a control volume.
 
-\subsection{Objectives}
+\section{Objectives}
 
-The objectives of this work were to analyse the data recovered from the campaign mission held during February 2019, in which there were more sensors installed especially in the bottom and the lower region of the meteorological station. This tackled the limitations found in the previous works mentioned above. From this data, we identified the katabatic wind episodes and performed an analysis of its turbulent characteristics.
+The objectives of this work were to analyse the data recovered from the campaign mission held during February 2019, in which there were more sensors installed especially in the bottom and the lower region of the meteorological station. This tackled the limitations found in the previous works mentioned above, where the lack of instruments in the lower level of the mast didn't allow to measure the katabatic wind maximum. From this data, we identified the katabatic wind episodes and performed an analysis of its turbulent characteristics.
